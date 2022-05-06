@@ -1,9 +1,8 @@
-# <img src="_static/lighton_small.png" width=60/>Title
+# <img src="_static/lighton_small.png" width=60/>RITA
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
 
-# **RITA**
 
 RITA is a family of autoregressive protein models, developed in collaboration between Lighton, Harvard and Oxford.
 
@@ -15,11 +14,13 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 
-# Usage 
+## Usage 
 Instantiate a model like so:
+
     from transformers import AutoModel, AutoModelForCausalLM
     model = AutoModelForCausalLM.from_pretrained("Seledorn/RITA_s, trust_remote_code=True")
     tokenizer = AutoTokenizer.from_pretrained("Seledorn/RITA_s")
+
 for generation use we support pipelines:
    
    
@@ -27,3 +28,6 @@ for generation use we support pipelines:
     sequences = rita_gen("MAB", max_length=20, do_sample=True, top_k=950, repetition_penalty=1.2, num_return_sequences=2, eos_token_id=2)
     for seq in sequences:
         print(f"seq: {seq['generated_text'].replace(' ', '')}")
+
+
+Paper link will be provided shortly
