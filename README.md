@@ -2,23 +2,28 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
-Descriptive Text - with hyperlink to the relevant paper/blog post
 
-**Remember to fill in the Description, Website and Topics of the repository.**
+# **RITA**
 
-## Requirements
+RITA is a family of autoregressive protein models, developed in collaboration between Lighton, Harvard and Oxford.
 
-- Enter a list of requirements in the code environment, or point to the `requirements.txt` file
-- Give instructions on how to fetch the dataset, if needed
+Model | #Params | d_model | layers | lm loss uniref-100
+--- | --- | --- | --- | --- | 
+[Small](https://huggingface.co/lightonai/RITA_s) | 85M  | 768 | 12 | 2.31
+[Medium](https://huggingface.co/lightonai/RITA_m) | 300M | 1024 | 24 | 2.01
+[Large](https://huggingface.co/lightonai/RITA_l)| 680M | 1536 | 24 | 1.82
+[XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
-## Reproducing our results
 
-- Give detailed instructions on how to run the code in order to replicate the results
-
-## Citation \[ OPTIONAL \]
-
-If you found this implementation useful in your research, please consider citing:
-<Bibtex for citation>
-
-## Hardware specs \[ OPTIONAL \]
-Give details on the hardware used.
+# Usage 
+Instantiate a model like so:
+    from transformers import AutoModel, AutoModelForCausalLM
+    model = AutoModelForCausalLM.from_pretrained("Seledorn/RITA_s, trust_remote_code=True")
+    tokenizer = AutoTokenizer.from_pretrained("Seledorn/RITA_s")
+for generation use we support pipelines:
+   
+   
+    rita_gen = pipeline('text-generation', model=model, tokenizer = tokenizer)
+    sequences = rita_gen("MAB", max_length=20, do_sample=True, top_k=950, repetition_penalty=1.2, num_return_sequences=2, eos_token_id=2)
+    for seq in sequences:
+        print(f"seq: {seq['generated_text'].replace(' ', '')}")
