@@ -18,8 +18,8 @@ Model | #Params | d_model | layers | lm loss uniref-100
 Instantiate a model like so:
 
     from transformers import AutoModel, AutoModelForCausalLM
-    model = AutoModelForCausalLM.from_pretrained("Seledorn/RITA_s, trust_remote_code=True")
-    tokenizer = AutoTokenizer.from_pretrained("Seledorn/RITA_s")
+    model = AutoModelForCausalLM.from_pretrained("lightonai/RITA_s, trust_remote_code=True")
+    tokenizer = AutoTokenizer.from_pretrained("lightonai/RITA_s")
 
 for generation use we support pipelines:
    
