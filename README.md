@@ -14,6 +14,9 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 
+# <img src="_static/perplexity.png" width=600/>RITA
+
+
 ## Usage 
 Instantiate a model like so:
 
