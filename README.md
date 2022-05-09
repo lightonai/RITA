@@ -1,4 +1,4 @@
-# <img src="_static/lighton_small.png" width=60/>RITA
+# <img src="_static/lighton_small.png" width=60/> RITA: a Study on Scaling Up Generative Protein Sequence Models
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
@@ -14,7 +14,7 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 
-# <img src="_static/perplexity.png" width=600/>RITA
+# <img src="_static/perplexity.png" width=600/>
 
 
 ## Usage 
