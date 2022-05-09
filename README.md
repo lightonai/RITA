@@ -14,7 +14,14 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 
-# <img src="_static/perplexity.png" width=600/>
+## Results
+<p align="center">
+<img src="_static/perplexity.png" width=800/>
+</p>
+
+
+Paper link with all results will be provided shortly
+
 
 
 ## Usage 
@@ -32,5 +39,3 @@ for generation use we support pipelines:
     for seq in sequences:
         print(f"seq: {seq['generated_text'].replace(' ', '')}")
 
-
-Paper link will be provided shortly
