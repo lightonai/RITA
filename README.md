@@ -12,7 +12,7 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 ## Results
-A link to the pape with all the results will be provided soon.
+A link to the paper with all the results will be provided soon.
 <p align="center">
 <img src="_static/perplexity.png" width=800/>
 </p>
