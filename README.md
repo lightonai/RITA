@@ -33,5 +33,7 @@ for generation use we support pipelines:
     for seq in sequences:
         print(f"seq: {seq['generated_text'].replace(' ', '')}")
 
+Or see `example.py`
+
 ## How to cite
 Coming soon.
