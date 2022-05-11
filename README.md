@@ -26,8 +26,8 @@ Instantiate a model like so:
 
 for generation use we support pipelines:
    
-   
-    rita_gen = pipeline('text-generation', model=model, tokenizer = tokenizer)
+    from transformers import pipeline
+    rita_gen = pipeline('text-generation', model=model, tokenizer=tokenizer)
     sequences = rita_gen("MAB", max_length=20, do_sample=True, top_k=950, repetition_penalty=1.2, 
                          num_return_sequences=2, eos_token_id=2)
     for seq in sequences:
