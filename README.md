@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
-RITA is a family of autoregressive protein models, developed by a collaboration of [Lighton](https://lighton.ai/), the [OATML group](https://oatml.cs.ox.ac.uk/) at Oxford, and the [Debbie Marks Lab](https://www.deboramarkslab.com/) at Harvard.
+RITA is a family of autoregressive protein models, developed by a collaboration of [Lighton](https://lighton.ai/), the [OATML group](https://oatml.cs.ox.ac.uk/) at Oxford, and the [Debbie Marks Lab](https://www.deboramarkslab.com/) at Harvard. 
 
 Model | #Params | d_model | layers | lm loss uniref-100
 --- | --- | --- | --- | --- | 
@@ -12,11 +12,11 @@ Model | #Params | d_model | layers | lm loss uniref-100
 [XLarge](https://huggingface.co/lightonai/RITA_xl)| 1.2B | 2048 | 24 | 1.70 
 
 ## Results
-A link to the paper with all the results will be provided soon.
 <p align="center">
 <img src="_static/perplexity.png" width=800/>
 </p>
 
+For full results see our preprint: https://arxiv.org/abs/2205.05789
 ## Usage 
 Instantiate a model like so:
 
@@ -35,5 +35,14 @@ for generation use we support pipelines:
 
 Or see `example.py`
 
-## How to cite
-Coming soon.
+## How to cite    
+
+    @misc{https://doi.org/10.48550/arxiv.2205.05789,
+      doi = {10.48550/ARXIV.2205.05789},
+      url = {https://arxiv.org/abs/2205.05789},
+      author = {Hesslow, Daniel and Zanichelli, Niccoló and Notin, Pascal and Poli, Iacopo and Marks, Debora},
+      title = {RITA: a Study on Scaling Up Generative Protein Sequence Models},
+      publisher = {arXiv},
+      year = {2022},
+    }
+
