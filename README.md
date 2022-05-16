@@ -19,25 +19,25 @@ Model | #Params | d_model | layers | lm loss uniref-100
 For full results see our preprint: https://arxiv.org/abs/2205.05789
 ## Usage 
 Instantiate a model like so:
-
+``` python
     from transformers import AutoModel, AutoModelForCausalLM
     model = AutoModelForCausalLM.from_pretrained("lightonai/RITA_s, trust_remote_code=True")
     tokenizer = AutoTokenizer.from_pretrained("lightonai/RITA_s")
-
+```
 for generation use we support pipelines:
-   
+``` python
     from transformers import pipeline
     rita_gen = pipeline('text-generation', model=model, tokenizer=tokenizer)
     sequences = rita_gen("MAB", max_length=20, do_sample=True, top_k=950, repetition_penalty=1.2, 
                          num_return_sequences=2, eos_token_id=2)
     for seq in sequences:
         print(f"seq: {seq['generated_text'].replace(' ', '')}")
-
+```
 Or see `example.py`
 
 ## How to cite    
 
-    @misc{https://doi.org/10.48550/arxiv.2205.05789,
+    @misc{RITA2022,
       doi = {10.48550/ARXIV.2205.05789},
       url = {https://arxiv.org/abs/2205.05789},
       author = {Hesslow, Daniel and Zanichelli, Niccoló and Notin, Pascal and Poli, Iacopo and Marks, Debora},
