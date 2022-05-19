@@ -37,12 +37,9 @@ Or see `example.py`
 
 ## How to cite    
 
-    @misc{RITA2022,
-      doi = {10.48550/ARXIV.2205.05789},
-      url = {https://arxiv.org/abs/2205.05789},
-      author = {Hesslow, Daniel and Zanichelli, Niccoló and Notin, Pascal and Poli, Iacopo and Marks, Debora},
-      title = {RITA: a Study on Scaling Up Generative Protein Sequence Models},
-      publisher = {arXiv},
-      year = {2022},
+    @article{hesslow2022rita,
+      title={RITA: a Study on Scaling Up Generative Protein Sequence Models},
+      author={Hesslow, Daniel and Zanichelli, Niccol{\'o} and Notin, Pascal and Poli, Iacopo and Marks, Debora},
+      journal={arXiv preprint arXiv:2205.05789},
+      year={2022}
     }
-
