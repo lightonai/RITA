@@ -21,7 +21,7 @@ For full results see our preprint: https://arxiv.org/abs/2205.05789
 Instantiate a model like so:
 ``` python
 from transformers import AutoModel, AutoModelForCausalLM
-model = AutoModelForCausalLM.from_pretrained("lightonai/RITA_s, trust_remote_code=True")
+model = AutoModelForCausalLM.from_pretrained("lightonai/RITA_s", trust_remote_code=True)
 tokenizer = AutoTokenizer.from_pretrained("lightonai/RITA_s")
 ```
 for generation we support pipelines:
