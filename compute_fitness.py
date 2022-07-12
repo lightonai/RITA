@@ -70,7 +70,7 @@ def main():
     parser.add_argument('--DMS_index', type=int, help='Index of DMS assay to score in reference file')
     parser.add_argument('--output_scores_folder', default=None, type=str, help='Name of folder to write model scores to')
     parser.add_argument('--indel_mode', action='store_true', help='Whether to score sequences with insertions and deletions')
-    parser.add_argument('--performance_file', default='RITA_small.csv', type=str, help='Name of folder to write model scores to')
+    parser.add_argument('--performance_file', default='RITA_small.csv', type=str, help='Name of file to write performance to')
     args = parser.parse_args()
 
     model = AutoModelForCausalLM.from_pretrained(args.RITA_model_name_or_path,trust_remote_code=True)
